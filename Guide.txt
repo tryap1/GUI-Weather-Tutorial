@@ -1,3 +1,6 @@
+#test code to understand tkinter
+
+
 import tkinter as tk
 
 HEIGHT = 400
