@@ -1,0 +1,31 @@
+import tkinter as tk
+
+HEIGHT = 400
+WIDTH = 500
+
+root = tk.Tk()
+#everything in application goes in beween the root lines
+canvas = tk.Canvas(root, height = HEIGHT, width = WIDTH)  #rectangular area intended for drawing pictures or other complex layouts
+canvas.pack()
+
+frame = tk.Frame(root, bg = "#80c1ff")
+frame.place(relx = 0.1, rely = 0.1, relwidth = 0.8, relheight = 0.5) #organizes widgets by placing them in a specific position in the parent widget
+
+#The pack() Method organizes widgets in blocks before placing them in the parent widget.
+#The grid() Method organizes widgets in a table-like structure in the parent widget.
+button = tk.Button(frame, text = "Test Button", bg = "gray") #place a button inside root container
+#button.pack(side = "left", fill = 'y', expand= True)
+#button.grid(row = 0, column = 0)
+button.place(relx = 0, rely = 0, relwidth = 0.25, relheight = 0.25)
+
+label = tk.Label(frame, text = "This is a label", bg = "yellow")
+#label.pack(side = "left", fill ="both")
+#label.grid(row = 0, column = 1)
+label.place(relx = 0.3, rely = 0, relwidth = 0.45, relheight = 0.25)
+
+entry = tk.Entry(frame, bg = 'green') #text form syntax
+#entry.pack(side = "left", fill ="both")
+#entry.grid(row = 0, column = 2)
+entry.place(relx = 0.8, rely = 0, relwidth = 0.2, relheight = 0.25)
+
+root.mainloop()
